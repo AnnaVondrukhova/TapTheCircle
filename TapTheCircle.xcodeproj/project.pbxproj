@@ -8,26 +8,52 @@
 
 /* Begin PBXBuildFile section */
 		C10E1EB924EA5F96004E05B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E1EB824EA5F96004E05B5 /* AppDelegate.swift */; };
-		C10E1EBB24EA5F96004E05B5 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C10E1EBA24EA5F96004E05B5 /* GameScene.sks */; };
+		C10E1EBB24EA5F96004E05B5 /* Level1.sks in Resources */ = {isa = PBXBuildFile; fileRef = C10E1EBA24EA5F96004E05B5 /* Level1.sks */; };
 		C10E1EBD24EA5F96004E05B5 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = C10E1EBC24EA5F96004E05B5 /* Actions.sks */; };
-		C10E1EBF24EA5F96004E05B5 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E1EBE24EA5F96004E05B5 /* GameScene.swift */; };
+		C10E1EBF24EA5F96004E05B5 /* Level1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E1EBE24EA5F96004E05B5 /* Level1.swift */; };
 		C10E1EC124EA5F96004E05B5 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E1EC024EA5F96004E05B5 /* GameViewController.swift */; };
 		C10E1EC424EA5F96004E05B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C10E1EC224EA5F96004E05B5 /* Main.storyboard */; };
-		C10E1EC624EA5F9C004E05B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C10E1EC524EA5F9C004E05B5 /* Assets.xcassets */; };
 		C10E1EC924EA5F9C004E05B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C10E1EC724EA5F9C004E05B5 /* LaunchScreen.storyboard */; };
+		C10E1ED524EA6025004E05B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C10E1ED324EA6025004E05B5 /* Assets.xcassets */; };
+		C10E1EDB24EA6D03004E05B5 /* Circle.sks in Resources */ = {isa = PBXBuildFile; fileRef = C10E1EDA24EA6D03004E05B5 /* Circle.sks */; };
+		C10E1EDD24EA73E0004E05B5 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E1EDC24EA73E0004E05B5 /* Circle.swift */; };
+		C10E1EE524EBC603004E05B5 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E1EE424EBC603004E05B5 /* MenuViewController.swift */; };
+		C10E1EE824EBC827004E05B5 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E1EE724EBC827004E05B5 /* MenuButton.swift */; };
+		C10E1EED24EC2B68004E05B5 /* LevelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E1EEC24EC2B68004E05B5 /* LevelsViewController.swift */; };
+		C10E1EF124EC2D74004E05B5 /* LevelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E1EF024EC2D74004E05B5 /* LevelButton.swift */; };
+		C10E1EF324EC2E64004E05B5 /* LevelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E1EF224EC2E64004E05B5 /* LevelTableViewCell.swift */; };
+		C10E1EF524ED61BA004E05B5 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E1EF424ED61B9004E05B5 /* GameOverViewController.swift */; };
+		C10E1EF724EE7231004E05B5 /* Level2.sks in Resources */ = {isa = PBXBuildFile; fileRef = C10E1EF624EE7231004E05B5 /* Level2.sks */; };
+		C10E1EF924EE725B004E05B5 /* Level2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E1EF824EE725B004E05B5 /* Level2.swift */; };
+		C10E1EFC24EE735C004E05B5 /* ExplosionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E1EFB24EE735B004E05B5 /* ExplosionService.swift */; };
+		C171BB5C24EE866100466CB7 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C171BB5B24EE866100466CB7 /* DetailsViewController.swift */; };
+		C171BB5F24EECB2F00466CB7 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = C171BB5E24EECB2F00466CB7 /* Palette.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C10E1EB524EA5F96004E05B5 /* TapTheCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapTheCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C10E1EB824EA5F96004E05B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C10E1EBA24EA5F96004E05B5 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		C10E1EBA24EA5F96004E05B5 /* Level1.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level1.sks; sourceTree = "<group>"; };
 		C10E1EBC24EA5F96004E05B5 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		C10E1EBE24EA5F96004E05B5 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		C10E1EBE24EA5F96004E05B5 /* Level1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level1.swift; sourceTree = "<group>"; };
 		C10E1EC024EA5F96004E05B5 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		C10E1EC324EA5F96004E05B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C10E1EC524EA5F9C004E05B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C10E1EC824EA5F9C004E05B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C10E1ECA24EA5F9C004E05B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C10E1ED324EA6025004E05B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C10E1EDA24EA6D03004E05B5 /* Circle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Circle.sks; sourceTree = "<group>"; };
+		C10E1EDC24EA73E0004E05B5 /* Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
+		C10E1EE424EBC603004E05B5 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		C10E1EE724EBC827004E05B5 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
+		C10E1EEC24EC2B68004E05B5 /* LevelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsViewController.swift; sourceTree = "<group>"; };
+		C10E1EF024EC2D74004E05B5 /* LevelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelButton.swift; sourceTree = "<group>"; };
+		C10E1EF224EC2E64004E05B5 /* LevelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTableViewCell.swift; sourceTree = "<group>"; };
+		C10E1EF424ED61B9004E05B5 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
+		C10E1EF624EE7231004E05B5 /* Level2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level2.sks; sourceTree = "<group>"; };
+		C10E1EF824EE725B004E05B5 /* Level2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level2.swift; sourceTree = "<group>"; };
+		C10E1EFB24EE735B004E05B5 /* ExplosionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplosionService.swift; sourceTree = "<group>"; };
+		C171BB5B24EE866100466CB7 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		C171BB5E24EECB2F00466CB7 /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,16 +87,125 @@
 			isa = PBXGroup;
 			children = (
 				C10E1EB824EA5F96004E05B5 /* AppDelegate.swift */,
-				C10E1EBA24EA5F96004E05B5 /* GameScene.sks */,
-				C10E1EBC24EA5F96004E05B5 /* Actions.sks */,
-				C10E1EBE24EA5F96004E05B5 /* GameScene.swift */,
-				C10E1EC024EA5F96004E05B5 /* GameViewController.swift */,
 				C10E1EC224EA5F96004E05B5 /* Main.storyboard */,
-				C10E1EC524EA5F9C004E05B5 /* Assets.xcassets */,
 				C10E1EC724EA5F9C004E05B5 /* LaunchScreen.storyboard */,
+				C10E1EE124EBC2F6004E05B5 /* Menu */,
+				C10E1EEB24EC2B30004E05B5 /* Levels */,
+				C10E1EE624EBC74F004E05B5 /* Game */,
 				C10E1ECA24EA5F9C004E05B5 /* Info.plist */,
+				C171BB5D24EECAFE00466CB7 /* Design */,
 			);
 			path = TapTheCircle;
+			sourceTree = "<group>";
+		};
+		C10E1EDE24EBC281004E05B5 /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				C10E1EBC24EA5F96004E05B5 /* Actions.sks */,
+				C10E1EBA24EA5F96004E05B5 /* Level1.sks */,
+				C10E1EBE24EA5F96004E05B5 /* Level1.swift */,
+				C10E1EF624EE7231004E05B5 /* Level2.sks */,
+				C10E1EF824EE725B004E05B5 /* Level2.swift */,
+			);
+			path = Levels;
+			sourceTree = "<group>";
+		};
+		C10E1EDF24EBC2A6004E05B5 /* Emitter */ = {
+			isa = PBXGroup;
+			children = (
+				C10E1EDA24EA6D03004E05B5 /* Circle.sks */,
+			);
+			path = Emitter;
+			sourceTree = "<group>";
+		};
+		C10E1EE024EBC2BC004E05B5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C10E1EDC24EA73E0004E05B5 /* Circle.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C10E1EE124EBC2F6004E05B5 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				C10E1EE924EC2ADE004E05B5 /* View */,
+				C10E1EEA24EC2AEE004E05B5 /* Controller */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		C10E1EE624EBC74F004E05B5 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				C10E1EC024EA5F96004E05B5 /* GameViewController.swift */,
+				C10E1EF424ED61B9004E05B5 /* GameOverViewController.swift */,
+				C10E1EDE24EBC281004E05B5 /* Levels */,
+				C10E1EDF24EBC2A6004E05B5 /* Emitter */,
+				C10E1EE024EBC2BC004E05B5 /* Models */,
+				C10E1EFA24EE733A004E05B5 /* Services */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		C10E1EE924EC2ADE004E05B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C10E1EE724EBC827004E05B5 /* MenuButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C10E1EEA24EC2AEE004E05B5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C10E1EE424EBC603004E05B5 /* MenuViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C10E1EEB24EC2B30004E05B5 /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				C10E1EEF24EC2D3F004E05B5 /* View */,
+				C10E1EEE24EC2B71004E05B5 /* Controller */,
+			);
+			path = Levels;
+			sourceTree = "<group>";
+		};
+		C10E1EEE24EC2B71004E05B5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C10E1EEC24EC2B68004E05B5 /* LevelsViewController.swift */,
+				C171BB5B24EE866100466CB7 /* DetailsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C10E1EEF24EC2D3F004E05B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C10E1EF024EC2D74004E05B5 /* LevelButton.swift */,
+				C10E1EF224EC2E64004E05B5 /* LevelTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C10E1EFA24EE733A004E05B5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C10E1EFB24EE735B004E05B5 /* ExplosionService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C171BB5D24EECAFE00466CB7 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				C10E1ED324EA6025004E05B5 /* Assets.xcassets */,
+				C171BB5E24EECB2F00466CB7 /* Palette.swift */,
+			);
+			path = Design;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,10 +267,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C10E1EC424EA5F96004E05B5 /* Main.storyboard in Resources */,
-				C10E1EBB24EA5F96004E05B5 /* GameScene.sks in Resources */,
-				C10E1EC624EA5F9C004E05B5 /* Assets.xcassets in Resources */,
+				C10E1EBB24EA5F96004E05B5 /* Level1.sks in Resources */,
 				C10E1EC924EA5F9C004E05B5 /* LaunchScreen.storyboard in Resources */,
 				C10E1EBD24EA5F96004E05B5 /* Actions.sks in Resources */,
+				C10E1ED524EA6025004E05B5 /* Assets.xcassets in Resources */,
+				C10E1EF724EE7231004E05B5 /* Level2.sks in Resources */,
+				C10E1EDB24EA6D03004E05B5 /* Circle.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,9 +283,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C10E1EBF24EA5F96004E05B5 /* GameScene.swift in Sources */,
+				C10E1EBF24EA5F96004E05B5 /* Level1.swift in Sources */,
+				C10E1EE824EBC827004E05B5 /* MenuButton.swift in Sources */,
+				C10E1EE524EBC603004E05B5 /* MenuViewController.swift in Sources */,
+				C10E1EDD24EA73E0004E05B5 /* Circle.swift in Sources */,
+				C10E1EF524ED61BA004E05B5 /* GameOverViewController.swift in Sources */,
+				C10E1EF124EC2D74004E05B5 /* LevelButton.swift in Sources */,
+				C10E1EF324EC2E64004E05B5 /* LevelTableViewCell.swift in Sources */,
+				C10E1EED24EC2B68004E05B5 /* LevelsViewController.swift in Sources */,
 				C10E1EC124EA5F96004E05B5 /* GameViewController.swift in Sources */,
 				C10E1EB924EA5F96004E05B5 /* AppDelegate.swift in Sources */,
+				C10E1EF924EE725B004E05B5 /* Level2.swift in Sources */,
+				C171BB5C24EE866100466CB7 /* DetailsViewController.swift in Sources */,
+				C10E1EFC24EE735C004E05B5 /* ExplosionService.swift in Sources */,
+				C171BB5F24EECB2F00466CB7 /* Palette.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
