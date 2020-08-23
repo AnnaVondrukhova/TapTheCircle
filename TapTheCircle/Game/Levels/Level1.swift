@@ -19,31 +19,30 @@ class Level1: SKScene {
             scoreLabel.text = "\(score)\\\(maxScore)"
         }
     }
-    private var background = SKSpriteNode(imageNamed: "backgroundYellow")
+    private var background = SKSpriteNode(imageNamed: "backgroundGray")
     
-    private let circleSize = CGFloat(200)
+    private let circleSize = CGFloat(120)
     private var circleColor = UIColor()
     private let maxScore = 2
     
     override func didMove(to view: SKView) {
-        
+        print(self.view?.bounds.size.height)
         //создаем основной фон
         background.zPosition = -1
-//        background.scale(to: CGSize(width: frame.size.width, height: frame.size.height))
+        background.scale(to: CGSize(width: frame.size.width, height: frame.size.width))
         background.position = CGPoint(x:  frame.size.width/2, y: frame.size.height/2)
-        let constraint = SKConstraint.zRotation(SKRange(constantValue: 0))
-        background.constraints = [constraint]
+        self.physicsWorld.gravity = CGVector(dx: 0, dy: 0)
         self.addChild(background)
 
         //создаем фон для кнопок и строки счета
-        let headerBackground = SKShapeNode(rectOf: CGSize(width: (frame.size.width), height: 100.0))
+        let headerBackground = SKShapeNode(rectOf: CGSize(width: (frame.size.width), height: 50.0))
         headerBackground.fillColor = UIColor(red:1.0, green:1.0, blue:1.0, alpha:0.8)
-        headerBackground.position = CGPoint(x: frame.size.width / 2, y: frame.size.height-50)
+        headerBackground.position = CGPoint(x: frame.size.width / 2, y: frame.size.height - 25.0)
         self.addChild(headerBackground)
         
         //создаем окно счета
         scoreLabel.text = "0\\\(maxScore)"
-        scoreLabel.position = CGPoint(x: frame.size.width / 2, y: -50)
+        scoreLabel.position = CGPoint(x: frame.size.width / 2, y: frame.size.height - 25.0)
         scoreLabel.fontColor = UIColor.black
         scoreLabel.fontSize = 40
         self.addChild(scoreLabel)
@@ -56,8 +55,9 @@ class Level1: SKScene {
     }
     
     func createCircle(color: UIColor, size: CGFloat) {
-        let randX = CGFloat(arc4random_uniform(UInt32(self.view!.scene!.frame.maxX)))
-        let randY = -1*CGFloat(arc4random_uniform(UInt32(-1*self.view!.scene!.frame.minY)))
+        let randX = CGFloat(arc4random_uniform(UInt32(self.view!.scene!.frame.maxX - circleSize))) + circleSize/2
+        let randY = CGFloat(arc4random_uniform(UInt32(self.view!.scene!.frame.maxY - circleSize - 50))) + circleSize/2
+        print(randX,randY)
         
         self.circle = Circle(color: color, size: size, position: CGPoint(x:randX, y:randY))
         

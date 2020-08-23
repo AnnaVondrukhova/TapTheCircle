@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C10E1EB924EA5F96004E05B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E1EB824EA5F96004E05B5 /* AppDelegate.swift */; };
-		C10E1EBB24EA5F96004E05B5 /* Level1.sks in Resources */ = {isa = PBXBuildFile; fileRef = C10E1EBA24EA5F96004E05B5 /* Level1.sks */; };
 		C10E1EBD24EA5F96004E05B5 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = C10E1EBC24EA5F96004E05B5 /* Actions.sks */; };
 		C10E1EBF24EA5F96004E05B5 /* Level1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E1EBE24EA5F96004E05B5 /* Level1.swift */; };
 		C10E1EC124EA5F96004E05B5 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E1EC024EA5F96004E05B5 /* GameViewController.swift */; };
@@ -20,20 +19,19 @@
 		C10E1EE524EBC603004E05B5 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E1EE424EBC603004E05B5 /* MenuViewController.swift */; };
 		C10E1EE824EBC827004E05B5 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E1EE724EBC827004E05B5 /* MenuButton.swift */; };
 		C10E1EED24EC2B68004E05B5 /* LevelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E1EEC24EC2B68004E05B5 /* LevelsViewController.swift */; };
-		C10E1EF124EC2D74004E05B5 /* LevelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E1EF024EC2D74004E05B5 /* LevelButton.swift */; };
-		C10E1EF324EC2E64004E05B5 /* LevelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E1EF224EC2E64004E05B5 /* LevelTableViewCell.swift */; };
 		C10E1EF524ED61BA004E05B5 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E1EF424ED61B9004E05B5 /* GameOverViewController.swift */; };
-		C10E1EF724EE7231004E05B5 /* Level2.sks in Resources */ = {isa = PBXBuildFile; fileRef = C10E1EF624EE7231004E05B5 /* Level2.sks */; };
 		C10E1EF924EE725B004E05B5 /* Level2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E1EF824EE725B004E05B5 /* Level2.swift */; };
 		C10E1EFC24EE735C004E05B5 /* ExplosionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E1EFB24EE735B004E05B5 /* ExplosionService.swift */; };
-		C171BB5C24EE866100466CB7 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C171BB5B24EE866100466CB7 /* DetailsViewController.swift */; };
 		C171BB5F24EECB2F00466CB7 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = C171BB5E24EECB2F00466CB7 /* Palette.swift */; };
+		C195301924F1386E0080B9F9 /* PercentLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C195301824F1386E0080B9F9 /* PercentLayoutConstraint.swift */; };
+		C195301B24F1536B0080B9F9 /* LevelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C195301A24F1536B0080B9F9 /* LevelCollectionViewCell.swift */; };
+		C195301D24F153FE0080B9F9 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = C195301C24F153FE0080B9F9 /* Level.swift */; };
+		C195302024F158B80080B9F9 /* LevelsData.txt in Resources */ = {isa = PBXBuildFile; fileRef = C195301F24F158B80080B9F9 /* LevelsData.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C10E1EB524EA5F96004E05B5 /* TapTheCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapTheCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C10E1EB824EA5F96004E05B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C10E1EBA24EA5F96004E05B5 /* Level1.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level1.sks; sourceTree = "<group>"; };
 		C10E1EBC24EA5F96004E05B5 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		C10E1EBE24EA5F96004E05B5 /* Level1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level1.swift; sourceTree = "<group>"; };
 		C10E1EC024EA5F96004E05B5 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -46,14 +44,14 @@
 		C10E1EE424EBC603004E05B5 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		C10E1EE724EBC827004E05B5 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
 		C10E1EEC24EC2B68004E05B5 /* LevelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsViewController.swift; sourceTree = "<group>"; };
-		C10E1EF024EC2D74004E05B5 /* LevelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelButton.swift; sourceTree = "<group>"; };
-		C10E1EF224EC2E64004E05B5 /* LevelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTableViewCell.swift; sourceTree = "<group>"; };
 		C10E1EF424ED61B9004E05B5 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
-		C10E1EF624EE7231004E05B5 /* Level2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level2.sks; sourceTree = "<group>"; };
 		C10E1EF824EE725B004E05B5 /* Level2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level2.swift; sourceTree = "<group>"; };
 		C10E1EFB24EE735B004E05B5 /* ExplosionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplosionService.swift; sourceTree = "<group>"; };
-		C171BB5B24EE866100466CB7 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		C171BB5E24EECB2F00466CB7 /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
+		C195301824F1386E0080B9F9 /* PercentLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentLayoutConstraint.swift; sourceTree = "<group>"; };
+		C195301A24F1536B0080B9F9 /* LevelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCollectionViewCell.swift; sourceTree = "<group>"; };
+		C195301C24F153FE0080B9F9 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		C195301F24F158B80080B9F9 /* LevelsData.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LevelsData.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,9 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				C10E1EBC24EA5F96004E05B5 /* Actions.sks */,
-				C10E1EBA24EA5F96004E05B5 /* Level1.sks */,
 				C10E1EBE24EA5F96004E05B5 /* Level1.swift */,
-				C10E1EF624EE7231004E05B5 /* Level2.sks */,
 				C10E1EF824EE725B004E05B5 /* Level2.swift */,
 			);
 			path = Levels;
@@ -167,6 +163,7 @@
 		C10E1EEB24EC2B30004E05B5 /* Levels */ = {
 			isa = PBXGroup;
 			children = (
+				C195301E24F154050080B9F9 /* Model */,
 				C10E1EEF24EC2D3F004E05B5 /* View */,
 				C10E1EEE24EC2B71004E05B5 /* Controller */,
 			);
@@ -177,7 +174,6 @@
 			isa = PBXGroup;
 			children = (
 				C10E1EEC24EC2B68004E05B5 /* LevelsViewController.swift */,
-				C171BB5B24EE866100466CB7 /* DetailsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -185,8 +181,7 @@
 		C10E1EEF24EC2D3F004E05B5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C10E1EF024EC2D74004E05B5 /* LevelButton.swift */,
-				C10E1EF224EC2E64004E05B5 /* LevelTableViewCell.swift */,
+				C195301A24F1536B0080B9F9 /* LevelCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -204,8 +199,18 @@
 			children = (
 				C10E1ED324EA6025004E05B5 /* Assets.xcassets */,
 				C171BB5E24EECB2F00466CB7 /* Palette.swift */,
+				C195301824F1386E0080B9F9 /* PercentLayoutConstraint.swift */,
 			);
 			path = Design;
+			sourceTree = "<group>";
+		};
+		C195301E24F154050080B9F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C195301C24F153FE0080B9F9 /* Level.swift */,
+				C195301F24F158B80080B9F9 /* LevelsData.txt */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,11 +272,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C10E1EC424EA5F96004E05B5 /* Main.storyboard in Resources */,
-				C10E1EBB24EA5F96004E05B5 /* Level1.sks in Resources */,
+				C195302024F158B80080B9F9 /* LevelsData.txt in Resources */,
 				C10E1EC924EA5F9C004E05B5 /* LaunchScreen.storyboard in Resources */,
 				C10E1EBD24EA5F96004E05B5 /* Actions.sks in Resources */,
 				C10E1ED524EA6025004E05B5 /* Assets.xcassets in Resources */,
-				C10E1EF724EE7231004E05B5 /* Level2.sks in Resources */,
 				C10E1EDB24EA6D03004E05B5 /* Circle.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,19 +287,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C195301B24F1536B0080B9F9 /* LevelCollectionViewCell.swift in Sources */,
 				C10E1EBF24EA5F96004E05B5 /* Level1.swift in Sources */,
 				C10E1EE824EBC827004E05B5 /* MenuButton.swift in Sources */,
 				C10E1EE524EBC603004E05B5 /* MenuViewController.swift in Sources */,
 				C10E1EDD24EA73E0004E05B5 /* Circle.swift in Sources */,
 				C10E1EF524ED61BA004E05B5 /* GameOverViewController.swift in Sources */,
-				C10E1EF124EC2D74004E05B5 /* LevelButton.swift in Sources */,
-				C10E1EF324EC2E64004E05B5 /* LevelTableViewCell.swift in Sources */,
+				C195301924F1386E0080B9F9 /* PercentLayoutConstraint.swift in Sources */,
 				C10E1EED24EC2B68004E05B5 /* LevelsViewController.swift in Sources */,
 				C10E1EC124EA5F96004E05B5 /* GameViewController.swift in Sources */,
 				C10E1EB924EA5F96004E05B5 /* AppDelegate.swift in Sources */,
 				C10E1EF924EE725B004E05B5 /* Level2.swift in Sources */,
-				C171BB5C24EE866100466CB7 /* DetailsViewController.swift in Sources */,
 				C10E1EFC24EE735C004E05B5 /* ExplosionService.swift in Sources */,
+				C195301D24F153FE0080B9F9 /* Level.swift in Sources */,
 				C171BB5F24EECB2F00466CB7 /* Palette.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

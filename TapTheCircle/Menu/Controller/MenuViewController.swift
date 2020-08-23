@@ -9,12 +9,21 @@
 import UIKit
 
 class MenuViewController: UIViewController {
-
+    @IBOutlet var gameBeginButton: MenuButton!
+    @IBOutlet var chooseLevelButton: MenuButton!
+    @IBOutlet var settingsButton: MenuButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidLayoutSubviews() {
+        gameBeginButton.setupButton()
+        chooseLevelButton.setupButton()
+        settingsButton.setupButton()
+    }
+    
     
 //    @IBAction func gameBeginBtnTouchDown(_ sender: Any) {
 //        guard let button = sender as? MenuButton else { return }

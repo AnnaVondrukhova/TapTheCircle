@@ -10,17 +10,22 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
-class Circle: SKSpriteNode {
+class Circle: SKShapeNode {
     
-    convenience init(color: UIColor, size: CGFloat, position: CGPoint) {
-        let circleSize = CGSize(width: size, height: size)
-        let circleTexture = SKTexture(imageNamed: "circle")
-        self.init(texture: circleTexture, color: color, size: circleSize)
-        self.colorBlendFactor = 1.0
+    init(color: UIColor, size: CGFloat, position: CGPoint) {
+        super.init()
+        self.path = UIBezierPath(roundedRect: CGRect(x: -size/2, y: -size/2, width: size, height: size), cornerRadius: size/2).cgPath
+        self.fillColor = color
+        self.strokeColor = UIColor.white
+        self.lineWidth = size/20
         
         self.position = position
         self.physicsBody = SKPhysicsBody(circleOfRadius: size/2, center: CGPoint(x:0.5, y:0.5))
 
     }
-
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
 }

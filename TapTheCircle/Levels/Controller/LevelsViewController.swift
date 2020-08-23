@@ -9,44 +9,69 @@
 import UIKit
 
 class LevelsViewController: UIViewController {
-    @IBOutlet var tableView: UITableView!
-    let numberOfLevels = 5
+    
+    @IBOutlet var collectionView: UICollectionView!
+    let levels = Level.getLevels(from: "LevelsData")
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        collectionView.reloadData()
+        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        let cellSize = self.collectionView.frame.size.height
+        let insetX = (collectionView.bounds.width - cellSize) / 2.0
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.itemSize = CGSize(width: cellSize, height: cellSize)
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: insetX, bottom: 0, right: insetX)
     }
 }
 
-extension LevelsViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return numberOfLevels
+
+
+extension LevelsViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return levels.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "levelCell") as? LevelTableViewCell else { return LevelTableViewCell() }
-        let levelNo = indexPath.row + 1
-        cell.delegate = self
-        cell.selectionStyle = .none
-        cell.configure(levelNo: levelNo)
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "levelCell", for: indexPath) as! LevelCollectionViewCell
+        cell.configure(level: levels[indexPath.item])
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
-    }
 }
 
-extension LevelsViewController: PressButtonDelegate {
-    func pressButton(level: Int) {
-        performSegue(withIdentifier: "toDetailsViewController", sender: level)
+extension LevelsViewController: UIScrollViewDelegate, UICollectionViewDelegate {
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        
+        let layout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let cellWidthWithSpasing = layout.itemSize.width + layout.minimumLineSpacing
+        
+        var offset = targetContentOffset.pointee
+        let index = round((offset.x + scrollView.contentInset.left) / cellWidthWithSpasing)
+        
+        offset = CGPoint(x: index * cellWidthWithSpasing - scrollView.contentInset.left, y: scrollView.contentInset.top)
+        targetContentOffset.pointee = offset
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let level = indexPath.item + 1
+        UserDefaults.standard.setValue(level, forKey: "level")
+        performSegue(withIdentifier: "playGameSegue", sender: level)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let vc = segue.destination as? DetailsViewController else { return }
-        vc.level = sender as? Int
-        vc.modalTransitionStyle = .crossDissolve
-        vc.modalPresentationStyle = .overCurrentContext
+        guard let level = sender as? Int else {return}
+        let vc = segue.destination as! GameViewController
+        vc.level = level
+    }
+}
+
+extension LevelsViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let cellSize = self.collectionView.frame.size.height
+        return CGSize(width: cellSize, height: cellSize)
     }
 }
