@@ -9,24 +9,24 @@
 import UIKit
 
 class MenuViewController: UIViewController {
-    @IBOutlet var gameBeginButton: MenuButton!
-    @IBOutlet var chooseLevelButton: MenuButton!
-    @IBOutlet var settingsButton: MenuButton!
+    @IBOutlet var gameBeginButton: CustomButton!
+    @IBOutlet var chooseLevelButton: CustomButton!
+    @IBOutlet var settingsButton: CustomButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
-    override func viewDidLayoutSubviews() {
-        gameBeginButton.setupButton()
-        chooseLevelButton.setupButton()
-        settingsButton.setupButton()
+    override func viewWillLayoutSubviews() {
+        gameBeginButton.layoutSubviews()
+        chooseLevelButton.layoutSubviews()
+        settingsButton.layoutSubviews()
     }
     
     
 //    @IBAction func gameBeginBtnTouchDown(_ sender: Any) {
-//        guard let button = sender as? MenuButton else { return }
+//        guard let button = sender as? CustomButton else { return }
 //        button.backgroundColor = UIColor.red
 //    }
     
@@ -37,14 +37,15 @@ class MenuViewController: UIViewController {
     @IBAction func chooseLevelBtnPressed(_ sender: Any) {
         performSegue(withIdentifier: "toLevelsViewController", sender: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func settingsBtnPressed(_ sender: Any) {
+        performSegue(withIdentifier: "toSettingsViewController", sender: nil)
     }
-    */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overCurrentContext
+    }
 
 }

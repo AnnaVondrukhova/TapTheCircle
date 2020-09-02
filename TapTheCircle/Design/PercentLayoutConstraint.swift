@@ -28,9 +28,9 @@ class PercentLayoutConstraint: NSLayoutConstraint {
         guard marginPercent > 0 else { return }
         
         switch firstAttribute {
-        case .top, .topMargin, .bottom, .bottomMargin:
+        case .top, .topMargin, .bottom, .bottomMargin, .centerY, .centerYWithinMargins:
             constant = screenSize.height * marginPercent
-        case .leading, .leadingMargin, .trailing, .trailingMargin:
+        case .leading, .leadingMargin, .trailing, .trailingMargin, .centerX, .centerXWithinMargins:
             constant = screenSize.width * marginPercent
         default: break
         }

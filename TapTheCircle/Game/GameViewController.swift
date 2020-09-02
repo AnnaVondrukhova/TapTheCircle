@@ -19,6 +19,7 @@ class GameViewController: UIViewController {
      
         NotificationCenter.default.addObserver(self, selector: #selector(showController), name: NSNotification.Name(rawValue: "showController"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(startGame), name: NSNotification.Name(rawValue: "startGame"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(endGame), name: NSNotification.Name(rawValue: "dismissController"), object: nil)
         
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "startGame"), object: nil)
     }
@@ -46,6 +47,10 @@ class GameViewController: UIViewController {
         }
     }
     
+    @objc func endGame() {
+        dismiss(animated: true, completion: nil)
+    }
+    
     @objc func showController() {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "GameOverViewController")
         vc.modalTransitionStyle = .crossDissolve
@@ -58,7 +63,7 @@ class GameViewController: UIViewController {
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return .landscapeRight
+        return .landscape
     }
 
     override var prefersStatusBarHidden: Bool {

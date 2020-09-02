@@ -21,6 +21,7 @@ class LevelsViewController: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
+        self.view.layoutSubviews()
         let cellSize = self.collectionView.frame.size.height
         let insetX = (collectionView.bounds.width - cellSize) / 2.0
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout

@@ -25,4 +25,5 @@ struct Palette {
                    "зеленый": UIColor(red: 0.62, green: 0.89, blue: 0.31, alpha: 1.00),
                    "синий": UIColor(red: 0.54, green: 0.81, blue: 0.98, alpha: 1.00),
                    "фиолетовый": UIColor(red: 0.56, green: 0.53, blue: 0.75, alpha: 1.00)]
+    static let backgroundGray = UIColor(red: 0.48, green: 0.48, blue: 0.48, alpha: 1.00)
 }

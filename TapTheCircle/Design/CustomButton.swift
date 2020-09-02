@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class MenuButton: UIButton {
+class CustomButton: UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -19,25 +19,19 @@ class MenuButton: UIButton {
         super.init(coder: coder)
     }
     
-    func setupButton() {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
         self.layer.cornerRadius = self.frame.height/2
-        print("Width \(self.frame.width)")
+//        print("Height \(self.frame.height)")
         self.layer.shadowColor = UIColor.darkGray.cgColor
         self.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
         self.layer.shadowRadius = 3.0
         self.layer.shadowOpacity = 0.7
         
-        let width = self.frame.width
-        switch width {
-        case 0...210.0:
-            self.titleLabel?.font = UIFont.preferredFont(forTextStyle: .title3)
-        case 210...300:
-            self.titleLabel?.font = UIFont.preferredFont(forTextStyle: .title2)
-        default:
-            self.titleLabel?.font = UIFont.preferredFont(forTextStyle: .title1)
-        }
-
-        self.titleLabel?.adjustsFontSizeToFitWidth = true
+        let fontSize = self.frame.height * 0.4
+//        print("Fontsize: \(fontSize)")
+        self.titleLabel?.font = UIFont(name: "Kosko Bold", size: fontSize)
     }
     
     override open var isHighlighted: Bool {

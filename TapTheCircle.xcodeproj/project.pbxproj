@@ -17,16 +17,21 @@
 		C10E1EDB24EA6D03004E05B5 /* Circle.sks in Resources */ = {isa = PBXBuildFile; fileRef = C10E1EDA24EA6D03004E05B5 /* Circle.sks */; };
 		C10E1EDD24EA73E0004E05B5 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E1EDC24EA73E0004E05B5 /* Circle.swift */; };
 		C10E1EE524EBC603004E05B5 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E1EE424EBC603004E05B5 /* MenuViewController.swift */; };
-		C10E1EE824EBC827004E05B5 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E1EE724EBC827004E05B5 /* MenuButton.swift */; };
+		C10E1EE824EBC827004E05B5 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E1EE724EBC827004E05B5 /* CustomButton.swift */; };
 		C10E1EED24EC2B68004E05B5 /* LevelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E1EEC24EC2B68004E05B5 /* LevelsViewController.swift */; };
 		C10E1EF524ED61BA004E05B5 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E1EF424ED61B9004E05B5 /* GameOverViewController.swift */; };
 		C10E1EF924EE725B004E05B5 /* Level2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E1EF824EE725B004E05B5 /* Level2.swift */; };
 		C10E1EFC24EE735C004E05B5 /* ExplosionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10E1EFB24EE735B004E05B5 /* ExplosionService.swift */; };
+		C1435B2824F4044100158DE9 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1435B2724F4044100158DE9 /* CloseButton.swift */; };
+		C1435B2C24F7A9B700158DE9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1435B2B24F7A9B700158DE9 /* SettingsViewController.swift */; };
+		C1435B3024F907E200158DE9 /* bubble3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C1435B2E24F907E100158DE9 /* bubble3.mp3 */; };
+		C1435B3124F907E200158DE9 /* bubble2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C1435B2F24F907E200158DE9 /* bubble2.mp3 */; };
 		C171BB5F24EECB2F00466CB7 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = C171BB5E24EECB2F00466CB7 /* Palette.swift */; };
 		C195301924F1386E0080B9F9 /* PercentLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C195301824F1386E0080B9F9 /* PercentLayoutConstraint.swift */; };
 		C195301B24F1536B0080B9F9 /* LevelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C195301A24F1536B0080B9F9 /* LevelCollectionViewCell.swift */; };
 		C195301D24F153FE0080B9F9 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = C195301C24F153FE0080B9F9 /* Level.swift */; };
 		C195302024F158B80080B9F9 /* LevelsData.txt in Resources */ = {isa = PBXBuildFile; fileRef = C195301F24F158B80080B9F9 /* LevelsData.txt */; };
+		C195302224F2A2140080B9F9 /* Kosko.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C195302124F28E630080B9F9 /* Kosko.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,16 +47,21 @@
 		C10E1EDA24EA6D03004E05B5 /* Circle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Circle.sks; sourceTree = "<group>"; };
 		C10E1EDC24EA73E0004E05B5 /* Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
 		C10E1EE424EBC603004E05B5 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		C10E1EE724EBC827004E05B5 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
+		C10E1EE724EBC827004E05B5 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		C10E1EEC24EC2B68004E05B5 /* LevelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsViewController.swift; sourceTree = "<group>"; };
 		C10E1EF424ED61B9004E05B5 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		C10E1EF824EE725B004E05B5 /* Level2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level2.swift; sourceTree = "<group>"; };
 		C10E1EFB24EE735B004E05B5 /* ExplosionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplosionService.swift; sourceTree = "<group>"; };
+		C1435B2724F4044100158DE9 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
+		C1435B2B24F7A9B700158DE9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C1435B2E24F907E100158DE9 /* bubble3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bubble3.mp3; sourceTree = "<group>"; };
+		C1435B2F24F907E200158DE9 /* bubble2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bubble2.mp3; sourceTree = "<group>"; };
 		C171BB5E24EECB2F00466CB7 /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
 		C195301824F1386E0080B9F9 /* PercentLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentLayoutConstraint.swift; sourceTree = "<group>"; };
 		C195301A24F1536B0080B9F9 /* LevelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCollectionViewCell.swift; sourceTree = "<group>"; };
 		C195301C24F153FE0080B9F9 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		C195301F24F158B80080B9F9 /* LevelsData.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LevelsData.txt; sourceTree = "<group>"; };
+		C195302124F28E630080B9F9 /* Kosko.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Kosko.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +100,7 @@
 				C10E1EE124EBC2F6004E05B5 /* Menu */,
 				C10E1EEB24EC2B30004E05B5 /* Levels */,
 				C10E1EE624EBC74F004E05B5 /* Game */,
+				C1435B2924F7A96A00158DE9 /* Settings */,
 				C10E1ECA24EA5F9C004E05B5 /* Info.plist */,
 				C171BB5D24EECAFE00466CB7 /* Design */,
 			);
@@ -118,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				C10E1EDC24EA73E0004E05B5 /* Circle.swift */,
+				C1435B2724F4044100158DE9 /* CloseButton.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -125,7 +137,6 @@
 		C10E1EE124EBC2F6004E05B5 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				C10E1EE924EC2ADE004E05B5 /* View */,
 				C10E1EEA24EC2AEE004E05B5 /* Controller */,
 			);
 			path = Menu;
@@ -142,14 +153,6 @@
 				C10E1EFA24EE733A004E05B5 /* Services */,
 			);
 			path = Game;
-			sourceTree = "<group>";
-		};
-		C10E1EE924EC2ADE004E05B5 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				C10E1EE724EBC827004E05B5 /* MenuButton.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		C10E1EEA24EC2AEE004E05B5 /* Controller */ = {
@@ -194,12 +197,40 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		C1435B2924F7A96A00158DE9 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C1435B2A24F7A97900158DE9 /* Controller */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		C1435B2A24F7A97900158DE9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C1435B2B24F7A9B700158DE9 /* SettingsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C1435B2D24F907CF00158DE9 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				C1435B2F24F907E200158DE9 /* bubble2.mp3 */,
+				C1435B2E24F907E100158DE9 /* bubble3.mp3 */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
 		C171BB5D24EECAFE00466CB7 /* Design */ = {
 			isa = PBXGroup;
 			children = (
+				C1435B2D24F907CF00158DE9 /* Music */,
 				C10E1ED324EA6025004E05B5 /* Assets.xcassets */,
+				C195302124F28E630080B9F9 /* Kosko.ttf */,
 				C171BB5E24EECB2F00466CB7 /* Palette.swift */,
 				C195301824F1386E0080B9F9 /* PercentLayoutConstraint.swift */,
+				C10E1EE724EBC827004E05B5 /* CustomButton.swift */,
 			);
 			path = Design;
 			sourceTree = "<group>";
@@ -271,12 +302,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1435B3024F907E200158DE9 /* bubble3.mp3 in Resources */,
 				C10E1EC424EA5F96004E05B5 /* Main.storyboard in Resources */,
 				C195302024F158B80080B9F9 /* LevelsData.txt in Resources */,
+				C195302224F2A2140080B9F9 /* Kosko.ttf in Resources */,
 				C10E1EC924EA5F9C004E05B5 /* LaunchScreen.storyboard in Resources */,
 				C10E1EBD24EA5F96004E05B5 /* Actions.sks in Resources */,
 				C10E1ED524EA6025004E05B5 /* Assets.xcassets in Resources */,
 				C10E1EDB24EA6D03004E05B5 /* Circle.sks in Resources */,
+				C1435B3124F907E200158DE9 /* bubble2.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,12 +321,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1435B2824F4044100158DE9 /* CloseButton.swift in Sources */,
 				C195301B24F1536B0080B9F9 /* LevelCollectionViewCell.swift in Sources */,
 				C10E1EBF24EA5F96004E05B5 /* Level1.swift in Sources */,
-				C10E1EE824EBC827004E05B5 /* MenuButton.swift in Sources */,
+				C10E1EE824EBC827004E05B5 /* CustomButton.swift in Sources */,
 				C10E1EE524EBC603004E05B5 /* MenuViewController.swift in Sources */,
 				C10E1EDD24EA73E0004E05B5 /* Circle.swift in Sources */,
 				C10E1EF524ED61BA004E05B5 /* GameOverViewController.swift in Sources */,
+				C1435B2C24F7A9B700158DE9 /* SettingsViewController.swift in Sources */,
 				C195301924F1386E0080B9F9 /* PercentLayoutConstraint.swift in Sources */,
 				C10E1EED24EC2B68004E05B5 /* LevelsViewController.swift in Sources */,
 				C10E1EC124EA5F96004E05B5 /* GameViewController.swift in Sources */,

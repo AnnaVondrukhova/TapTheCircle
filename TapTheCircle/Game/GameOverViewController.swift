@@ -10,10 +10,29 @@ import UIKit
 
 class GameOverViewController: UIViewController {
 
+    @IBOutlet var playAgainButton: CustomButton!
+    @IBOutlet var chooseLevelButton: CustomButton!
+    @IBOutlet var textLabel: UILabel!
+    @IBOutlet var infoView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillLayoutSubviews() {
+        self.view.layoutSubviews()
+        
+        infoView.layoutSubviews()
+        print("infoView: \(infoView.frame.height)")
+        playAgainButton.layoutSubviews()
+        chooseLevelButton.layoutSubviews()
+        textLabel.layoutSubviews()
+        print("textLabel: \(textLabel.frame.size.height)")
+        print(playAgainButton.frame.height)
+        let fontSize = textLabel.frame.size.height * 0.3
+        textLabel.font = UIFont(name: "Kosko Bold", size: fontSize)
     }
     
     @IBAction func playAgainBtnPressed(_ sender: Any) {

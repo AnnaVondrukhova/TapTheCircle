@@ -9,54 +9,76 @@
 import UIKit
 import SpriteKit
 import GameplayKit
+import AVFoundation
 
 class Level1: SKScene {
     
     private var circle: Circle?
-    private var scoreLabel = SKLabelNode(fontNamed: "Verdana")
-    private var score = 0 {
+    private var closeBtn = SKShapeNode()
+    private var controlsPanel: SKShapeNode?
+    private var scoreLabel = SKLabelNode()
+    private var attributes = [NSAttributedString.Key.strokeWidth: -4.0,
+                              NSAttributedString.Key.strokeColor: UIColor.white,
+                              NSAttributedString.Key.foregroundColor: UIColor.darkGray,
+                              NSAttributedString.Key.font: UIFont(name: "Kosko Bold", size: 30),
+                              NSAttributedString.Key.paragraphStyle: NSTextAlignment.left] as [NSAttributedString.Key : Any]
+    private var maxScore = UserDefaults.standard.object(forKey: "levelPoints") as? Int ?? 10
+    private var score = Int() {
         didSet {
-            scoreLabel.text = "\(score)\\\(maxScore)"
+            let attributedString = NSAttributedString(string: "\(score)",
+                attributes: attributes)
+            scoreLabel.attributedText = attributedString
         }
     }
     private var background = SKSpriteNode(imageNamed: "backgroundGray")
     
     private let circleSize = CGFloat(120)
     private var circleColor = UIColor()
-    private let maxScore = 2
+    private var lastTouchDate = CACurrentMediaTime()
     
     override func didMove(to view: SKView) {
         print(self.view?.bounds.size.height)
         //создаем основной фон
-        background.zPosition = -1
+        background.zPosition = -2
         background.scale(to: CGSize(width: frame.size.width, height: frame.size.width))
         background.position = CGPoint(x:  frame.size.width/2, y: frame.size.height/2)
         self.physicsWorld.gravity = CGVector(dx: 0, dy: 0)
         self.addChild(background)
-
-        //создаем фон для кнопок и строки счета
-        let headerBackground = SKShapeNode(rectOf: CGSize(width: (frame.size.width), height: 50.0))
-        headerBackground.fillColor = UIColor(red:1.0, green:1.0, blue:1.0, alpha:0.8)
-        headerBackground.position = CGPoint(x: frame.size.width / 2, y: frame.size.height - 25.0)
-        self.addChild(headerBackground)
         
-        //создаем окно счета
-        scoreLabel.text = "0\\\(maxScore)"
-        scoreLabel.position = CGPoint(x: frame.size.width / 2, y: frame.size.height - 25.0)
-        scoreLabel.fontColor = UIColor.black
-        scoreLabel.fontSize = 40
-        self.addChild(scoreLabel)
-      
-        //создаем круг
+        controlsPanel = SKShapeNode(rect: CGRect(x: 0, y: 0, width: frame.size.width * 0.08, height: frame.size.height))
+        controlsPanel!.fillColor = Palette.backgroundGray
+        controlsPanel!.strokeColor = Palette.backgroundGray
+        controlsPanel!.position = CGPoint(x: 0, y: 0)
+        controlsPanel!.zPosition = 1
+        self.addChild(controlsPanel!)
+        
         let randomColorName = PaletteEnum.allCases.randomElement()!.rawValue
         circleColor = Palette.circlePalette[randomColorName]!
+        
+        //создаем окно счета
+        let scoreLabelSize = controlsPanel!.frame.width * 0.6
+        let fontSize = scoreLabelSize
+        attributes[NSAttributedString.Key.font] = UIFont(name: "Kosko Bold", size: fontSize)
+        attributes[NSAttributedString.Key.foregroundColor] = circleColor
+        
+        score = maxScore
+        scoreLabel.verticalAlignmentMode = .center
+        scoreLabel.horizontalAlignmentMode = .center
+        scoreLabel.position = CGPoint(x: controlsPanel!.frame.width/2, y: frame.size.height - controlsPanel!.frame.width/2)
+        scoreLabel.zPosition = 2
+        self.addChild(scoreLabel)
+      
+        //создаем кнопку выхода
+        createCloseBtn(color: circleColor, size: fontSize)
+        
+        //создаем круг
         createCircle(color: circleColor, size: circleSize)
 
     }
     
     func createCircle(color: UIColor, size: CGFloat) {
-        let randX = CGFloat(arc4random_uniform(UInt32(self.view!.scene!.frame.maxX - circleSize))) + circleSize/2
-        let randY = CGFloat(arc4random_uniform(UInt32(self.view!.scene!.frame.maxY - circleSize - 50))) + circleSize/2
+        let randX = CGFloat(arc4random_uniform(UInt32(self.view!.scene!.frame.maxX - controlsPanel!.frame.width - circleSize))) + controlsPanel!.frame.width + circleSize/2
+        let randY = CGFloat(arc4random_uniform(UInt32(self.view!.scene!.frame.maxY - circleSize))) + circleSize/2
         print(randX,randY)
         
         self.circle = Circle(color: color, size: size, position: CGPoint(x:randX, y:randY))
@@ -64,15 +86,44 @@ class Level1: SKScene {
         self.addChild(circle!)
     }
     
+    func createCloseBtn(color: UIColor, size: CGFloat) {
+        let closeBtnBackground = SKShapeNode(circleOfRadius: size/2 + 4.0)
+        closeBtnBackground.fillColor = UIColor.white
+        closeBtnBackground.position = CGPoint(x: self.controlsPanel!.frame.size.width/2, y: self.controlsPanel!.frame.size.width/2)
+        closeBtnBackground.zPosition = 1
+        self.addChild(closeBtnBackground)
+
+
+        self.closeBtn = SKShapeNode(circleOfRadius: size/2 + 4.0)
+        self.closeBtn.fillTexture = SKTexture(imageNamed: "close")
+        self.closeBtn.fillColor = color
+        self.closeBtn.position = CGPoint(x: self.controlsPanel!.frame.size.width/2, y: self.controlsPanel!.frame.size.width/2)
+        self.closeBtn.zPosition = 2
+        self.addChild(closeBtn)
+        
+//        let position = CGPoint(x:frame.size.width - 40.0, y: frame.size.height - 40.0)
+//        self.closeBtn = CloseButton.create(color: color, size: size, position: position)
+//        self.addChild(closeBtn)
+    }
+    
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
         let touchLocation = touch.location(in: self)
         
+        if closeBtn.contains(touchLocation) {
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "dismissController"), object: nil)
+        }
+        
         if circle!.contains(touchLocation) {
+            if(CACurrentMediaTime()-lastTouchDate < 0.5) {
+                return;
+            }
+            lastTouchDate = CACurrentMediaTime()
             ExplosionService.shared.explodeCircle(circle: circle!, scene: self)
-            score += 1
+            score -= 1
             let wait = SKAction.wait(forDuration: 0.5)
-            if score < maxScore {
+            if score > 0 {
                 let create = SKAction.run {
                     self.createCircle(color: self.circleColor, size: self.circleSize)
                 }
