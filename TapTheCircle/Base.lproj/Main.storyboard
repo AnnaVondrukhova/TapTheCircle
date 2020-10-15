@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T9g-Ww-Idi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T9g-Ww-Idi">
     <device id="retina4_7" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -11,7 +11,7 @@
         <!--Menu View Controller-->
         <scene sceneID="Kd1-3K-zi5">
             <objects>
-                <viewController id="T9g-Ww-Idi" customClass="MenuViewController" customModule="TapTheCircle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuViewController" id="T9g-Ww-Idi" customClass="MenuViewController" customModule="TapTheCircle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fXO-2q-p98">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,12 +41,9 @@
                                     <action selector="chooseLevelBtnPressed:" destination="T9g-Ww-Idi" eventType="touchUpInside" id="ERq-1p-2zw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4p-m6-Cjd" customClass="CustomButton" customModule="TapTheCircle" customModuleProvider="target">
-                                <rect key="frame" x="20" y="329" width="26.5" height="26"/>
-                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="F4p-m6-Cjd" secondAttribute="height" multiplier="1:1" id="f5C-sx-elN"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4p-m6-Cjd">
+                                <rect key="frame" x="7" y="307" width="49" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="settings"/>
                                 <connections>
@@ -59,16 +56,9 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="F4p-m6-Cjd" firstAttribute="leading" secondItem="4r2-M7-vWE" secondAttribute="leading" constant="20" id="0ek-oK-0UY" customClass="PercentLayoutConstraint" customModule="TapTheCircle" customModuleProvider="target">
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="marginPercent">
-                                        <real key="value" value="0.029999999999999999"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </constraint>
                             <constraint firstItem="84H-l0-Axs" firstAttribute="centerX" secondItem="fXO-2q-p98" secondAttribute="centerX" id="37T-By-wka"/>
                             <constraint firstItem="84H-l0-Axs" firstAttribute="height" secondItem="fXO-2q-p98" secondAttribute="height" multiplier="0.3" id="4PK-4S-C4K"/>
-                            <constraint firstItem="84H-l0-Axs" firstAttribute="top" secondItem="4r2-M7-vWE" secondAttribute="top" constant="20" id="9Zf-1A-RDN" customClass="PercentLayoutConstraint" customModule="TapTheCircle" customModuleProvider="target">
+                            <constraint firstItem="84H-l0-Axs" firstAttribute="top" secondItem="fXO-2q-p98" secondAttribute="top" constant="20" id="9Zf-1A-RDN" customClass="PercentLayoutConstraint" customModule="TapTheCircle" customModuleProvider="target">
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="marginPercent">
                                         <real key="value" value="0.14999999999999999"/>
@@ -78,13 +68,6 @@
                             <constraint firstItem="MRt-dF-7CK" firstAttribute="width" secondItem="W2I-Pq-LyB" secondAttribute="width" id="LLe-UO-GKh"/>
                             <constraint firstItem="84H-l0-Axs" firstAttribute="width" secondItem="fXO-2q-p98" secondAttribute="width" multiplier="0.9" id="MS5-zj-697"/>
                             <constraint firstItem="MRt-dF-7CK" firstAttribute="centerX" secondItem="fXO-2q-p98" secondAttribute="centerX" id="QGk-k9-RXP"/>
-                            <constraint firstItem="4r2-M7-vWE" firstAttribute="bottom" secondItem="F4p-m6-Cjd" secondAttribute="bottom" constant="20" id="ZfR-7s-omS" customClass="PercentLayoutConstraint" customModule="TapTheCircle" customModuleProvider="target">
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="marginPercent">
-                                        <real key="value" value="0.050000000000000003"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </constraint>
                             <constraint firstItem="W2I-Pq-LyB" firstAttribute="centerX" secondItem="fXO-2q-p98" secondAttribute="centerX" id="ayl-1N-4xg"/>
                             <constraint firstItem="MRt-dF-7CK" firstAttribute="top" secondItem="W2I-Pq-LyB" secondAttribute="bottom" constant="43" id="g1l-1b-bWe" customClass="PercentLayoutConstraint" customModule="TapTheCircle" customModuleProvider="target">
                                 <userDefinedRuntimeAttributes>
@@ -102,7 +85,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </constraint>
-                            <constraint firstItem="F4p-m6-Cjd" firstAttribute="height" secondItem="fXO-2q-p98" secondAttribute="height" multiplier="0.07" id="u6q-WL-NNA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4r2-M7-vWE"/>
                     </view>
@@ -118,7 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0UI-Ye-chl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-703" y="86"/>
+            <point key="canvasLocation" x="-703.89805097451278" y="85.599999999999994"/>
         </scene>
         <!--Levels View Controller-->
         <scene sceneID="7RU-Er-akk">
@@ -128,11 +110,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XUu-OY-k4K">
-                                <rect key="frame" x="44" y="37.5" width="579" height="300"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XUu-OY-k4K">
+                                <rect key="frame" x="0.0" y="62.5" width="667" height="250"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="ovd-zm-iTs"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="ovd-zm-iTs"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="30" minimumInteritemSpacing="30" id="wj5-nH-O6O">
                                     <size key="itemSize" width="300" height="300"/>
@@ -142,7 +124,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="levelCell" id="baa-ig-OE1" customClass="LevelCollectionViewCell" customModule="TapTheCircle" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                        <rect key="frame" x="0.0" y="-25" width="300" height="300"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dXJ-hA-jgM">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
@@ -236,8 +218,8 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="XUu-OY-k4K" firstAttribute="leading" secondItem="XeS-RC-AVL" secondAttribute="leading" constant="44" id="8Kg-B9-546"/>
-                            <constraint firstAttribute="trailing" secondItem="XUu-OY-k4K" secondAttribute="trailing" constant="44" id="Il5-wE-JXR"/>
+                            <constraint firstItem="XUu-OY-k4K" firstAttribute="leading" secondItem="XeS-RC-AVL" secondAttribute="leading" id="8Kg-B9-546"/>
+                            <constraint firstAttribute="trailing" secondItem="XUu-OY-k4K" secondAttribute="trailing" id="Il5-wE-JXR"/>
                             <constraint firstItem="XUu-OY-k4K" firstAttribute="height" secondItem="XeS-RC-AVL" secondAttribute="height" multiplier="0.6" priority="1" id="lik-b8-aiw"/>
                             <constraint firstItem="XUu-OY-k4K" firstAttribute="centerY" secondItem="XeS-RC-AVL" secondAttribute="centerY" id="zbR-u3-EZm"/>
                         </constraints>
@@ -553,8 +535,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ayl-oB-J4b"/>
-        <segue reference="SrV-GE-suy"/>
+        <segue reference="RUi-03-EKQ"/>
+        <segue reference="vO1-wN-MPn"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="TapTheCircle" width="1786" height="504"/>

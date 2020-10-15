@@ -1,8 +1,8 @@
 //
-//  Level1.swift
+//  Level3.swift
 //  TapTheCircle
 //
-//  Created by Anya on 17.08.2020.
+//  Created by Anya on 08.10.2020.
 //  Copyright © 2020 Anna Vondrukhova. All rights reserved.
 //
 
@@ -11,7 +11,12 @@ import SpriteKit
 import GameplayKit
 import AVFoundation
 
-class Level1: SKScene {
+struct CollisionCategories {
+    static let Circle: UInt32 = 0x1 << 0
+    static let ScreenEdge: UInt32 = 0x1 << 1
+}
+
+class Level3: SKScene {
     
     private var circle: Circle?
     private var closeBtn = SKShapeNode()
@@ -71,6 +76,13 @@ class Level1: SKScene {
         //создаем кнопку выхода
         createCloseBtn(color: circleColor, size: fontSize*1.1)
         
+        //задаем физику
+        let border = CGRect(x: controlsPanel!.frame.maxX, y: 0, width: self.frame.width - controlsPanel!.frame.width, height: self.frame.height)
+        let borderBody = SKPhysicsBody(edgeLoopFrom: border)
+        borderBody.friction = 0
+        borderBody.categoryBitMask = CollisionCategories.ScreenEdge
+        self.physicsBody = borderBody
+        
         //создаем круг
         createCircle(color: circleColor, size: circleSize)
 
@@ -82,8 +94,17 @@ class Level1: SKScene {
         print(randX,randY)
         
         self.circle = Circle(color: color, size: size, position: CGPoint(x:randX, y:randY))
+        circle?.setCollisionBehavior(size: size)
         
         self.addChild(circle!)
+        let positiveDx = Double(arc4random_uniform(30)) + 30.0
+        let negativeDx = Double(arc4random_uniform(30)) - 60.0
+        let dx = [positiveDx, negativeDx].randomElement()!
+        print(dx)
+        let positiveDy = sqrt(8100 - dx*dx)
+        let negativeDy = -sqrt(8100 - dx*dx)
+        let dy = [positiveDy, negativeDy].randomElement()!
+        circle!.physicsBody!.applyImpulse(CGVector(dx: dx, dy: dy))
     }
     
     func createCloseBtn(color: UIColor, size: CGFloat) {

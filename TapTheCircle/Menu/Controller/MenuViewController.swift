@@ -6,29 +6,30 @@
 //  Copyright © 2020 Anna Vondrukhova. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 class MenuViewController: UIViewController {
     @IBOutlet var gameBeginButton: CustomButton!
     @IBOutlet var chooseLevelButton: CustomButton!
-    @IBOutlet var settingsButton: CustomButton!
+    @IBOutlet var settingsButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
-    override func viewWillLayoutSubviews() {
-        gameBeginButton.layoutSubviews()
-        chooseLevelButton.layoutSubviews()
-        settingsButton.layoutSubviews()
+    override func viewDidLayoutSubviews() {
+        gameBeginButton.layoutIfNeeded()
+        chooseLevelButton.layoutIfNeeded()
+        settingsButton.layoutIfNeeded()
+        
+        settingsButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([settingsButton.centerXAnchor.constraint(equalTo: self.view.leadingAnchor, constant: self.view.frame.width * 0.04),
+                                     settingsButton.centerYAnchor.constraint(equalTo: self.view.bottomAnchor, constant: self.view.frame.width * -0.04),
+                                     settingsButton.widthAnchor.constraint(equalToConstant: self.view.frame.height * 0.1),
+                                     settingsButton.heightAnchor.constraint(equalTo: settingsButton.widthAnchor, multiplier: 1.0)])
     }
-    
-    
-//    @IBAction func gameBeginBtnTouchDown(_ sender: Any) {
-//        guard let button = sender as? CustomButton else { return }
-//        button.backgroundColor = UIColor.red
-//    }
     
     @IBAction func gameBeginBtnPressed(_ sender: Any) {
         performSegue(withIdentifier: "toGameViewController", sender: nil)

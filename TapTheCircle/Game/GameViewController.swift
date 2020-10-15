@@ -33,6 +33,8 @@ class GameViewController: UIViewController {
                 scene = Level1(size: view.bounds.size)
             case 2:
                 scene = Level2(size: view.bounds.size)
+            case 3:
+                scene = Level3(size: view.bounds.size)
             default:
                 scene = SKScene()
             }
@@ -48,7 +50,10 @@ class GameViewController: UIViewController {
     }
     
     @objc func endGame() {
-        dismiss(animated: true, completion: nil)
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MenuViewController")
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: true, completion: nil)
     }
     
     @objc func showController() {

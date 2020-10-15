@@ -11,19 +11,30 @@ import SpriteKit
 
 class CloseButton {
     
-    static func create(color: UIColor, size: CGFloat, position: CGPoint) -> SKShapeNode {
+    static func create(color: UIColor, size: CGFloat, attributes: [NSAttributedString.Key : Any]) -> SKShapeNode {
         
-        let path = UIBezierPath()
-        path.addArc(withCenter: CGPoint.zero, radius: size/2, startAngle: 0.0, endAngle: CGFloat(2*M_PI), clockwise: true)
-        path.addArc(withCenter: CGPoint.zero, radius: size/2*1.2, startAngle: 0.0, endAngle: CGFloat(2*M_PI), clockwise: true)
+        let closeBtn = SKShapeNode(circleOfRadius: size/2)
+        closeBtn.fillColor = color
+        closeBtn.strokeColor = .white
+        closeBtn.lineWidth = 2.0
         
-        let shape = SKShapeNode(path: path.cgPath)
-        shape.position = position
-        shape.fillColor = color
-        shape.strokeColor = UIColor.white
-        shape.lineWidth = 2.0
+        let innerCircle = SKShapeNode(circleOfRadius: size*0.38)
+        innerCircle.fillColor = Palette.backgroundGray
+        innerCircle.strokeColor = .white
+        innerCircle.lineWidth = 2.0
+        closeBtn.addChild(innerCircle)
         
-        return shape
+        let xLetterLabel = SKLabelNode()
+        var newAtttributes = attributes
+        newAtttributes[NSAttributedString.Key.font] = UIFont(name: "Kosko Bold", size: size*0.9)
+        newAtttributes[NSAttributedString.Key.foregroundColor] = color
+        let attributedString = NSAttributedString(string: "x", attributes: newAtttributes)
+        xLetterLabel.attributedText = attributedString
+        xLetterLabel.verticalAlignmentMode = .center
+        xLetterLabel.horizontalAlignmentMode = .center
+        closeBtn.addChild(xLetterLabel)
+        
+        return closeBtn
     }
     
     required init?(coder aDecoder: NSCoder) {

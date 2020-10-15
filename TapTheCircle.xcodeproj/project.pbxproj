@@ -32,6 +32,7 @@
 		C195301D24F153FE0080B9F9 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = C195301C24F153FE0080B9F9 /* Level.swift */; };
 		C195302024F158B80080B9F9 /* LevelsData.txt in Resources */ = {isa = PBXBuildFile; fileRef = C195301F24F158B80080B9F9 /* LevelsData.txt */; };
 		C195302224F2A2140080B9F9 /* Kosko.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C195302124F28E630080B9F9 /* Kosko.ttf */; };
+		C1FA15A1252F5E5B00CE86E7 /* Level3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FA15A0252F5E5B00CE86E7 /* Level3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		C195301C24F153FE0080B9F9 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		C195301F24F158B80080B9F9 /* LevelsData.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LevelsData.txt; sourceTree = "<group>"; };
 		C195302124F28E630080B9F9 /* Kosko.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Kosko.ttf; sourceTree = "<group>"; };
+		C1FA15A0252F5E5B00CE86E7 /* Level3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				C10E1EBC24EA5F96004E05B5 /* Actions.sks */,
 				C10E1EBE24EA5F96004E05B5 /* Level1.swift */,
 				C10E1EF824EE725B004E05B5 /* Level2.swift */,
+				C1FA15A0252F5E5B00CE86E7 /* Level3.swift */,
 			);
 			path = Levels;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				C10E1EC124EA5F96004E05B5 /* GameViewController.swift in Sources */,
 				C10E1EB924EA5F96004E05B5 /* AppDelegate.swift in Sources */,
 				C10E1EF924EE725B004E05B5 /* Level2.swift in Sources */,
+				C1FA15A1252F5E5B00CE86E7 /* Level3.swift in Sources */,
 				C10E1EFC24EE735C004E05B5 /* ExplosionService.swift in Sources */,
 				C195301D24F153FE0080B9F9 /* Level.swift in Sources */,
 				C171BB5F24EECB2F00466CB7 /* Palette.swift in Sources */,

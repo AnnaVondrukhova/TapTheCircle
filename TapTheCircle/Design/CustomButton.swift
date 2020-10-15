@@ -23,14 +23,12 @@ class CustomButton: UIButton {
         super.layoutSubviews()
         
         self.layer.cornerRadius = self.frame.height/2
-//        print("Height \(self.frame.height)")
         self.layer.shadowColor = UIColor.darkGray.cgColor
         self.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
         self.layer.shadowRadius = 3.0
         self.layer.shadowOpacity = 0.7
         
         let fontSize = self.frame.height * 0.4
-//        print("Fontsize: \(fontSize)")
         self.titleLabel?.font = UIFont(name: "Kosko Bold", size: fontSize)
     }
     

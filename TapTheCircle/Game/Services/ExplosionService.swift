@@ -13,6 +13,7 @@ import GameplayKit
 class ExplosionService {
     private init() {}
     static var shared = ExplosionService()
+    private let sounds = ["bubble2", "bubble3"]
     
     func explodeCircle(circle: Circle, scene: SKScene) {
         let generator = UINotificationFeedbackGenerator()
@@ -28,7 +29,8 @@ class ExplosionService {
     }
     
     func playSoundEffect(scene: SKScene) {
-        let bubble1Sound = SKAction.playSoundFileNamed("bubble2", waitForCompletion: false)
+        let randomSoundIndex = Int(arc4random_uniform(UInt32(sounds.count)))
+        let bubble1Sound = SKAction.playSoundFileNamed(sounds[randomSoundIndex], waitForCompletion: false)
         scene.run(bubble1Sound)
     }
 

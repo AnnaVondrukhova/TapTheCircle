@@ -18,6 +18,7 @@ class Circle: SKShapeNode {
         self.fillColor = color
         self.strokeColor = UIColor.white
         self.lineWidth = size/20
+        print(self.lineWidth)
         
         self.position = position
         self.physicsBody = SKPhysicsBody(circleOfRadius: size/2, center: CGPoint(x:0.5, y:0.5))
@@ -28,4 +29,14 @@ class Circle: SKShapeNode {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func setCollisionBehavior(size: CGFloat) {
+        self.physicsBody = SKPhysicsBody(circleOfRadius: size/2)
+        self.physicsBody?.categoryBitMask = CollisionCategories.Circle
+        self.physicsBody?.restitution = 1
+        self.physicsBody?.friction = 0
+        self.physicsBody?.collisionBitMask = CollisionCategories.ScreenEdge
+        self.physicsBody?.affectedByGravity = false
+        self.physicsBody?.angularDamping = 0
+        self.physicsBody?.linearDamping = 0
+    }
 }
